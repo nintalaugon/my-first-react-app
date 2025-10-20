@@ -1,53 +1,43 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState('Home');
-  const links = ['Home', 'About', 'Services', 'Portfolio', 'Contact'];
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className="nav-wrap">
       <nav className="navbar">
-        <div className="brand" onClick={() => { setActive('Home'); setOpen(false); }}>
-          <div className="logo">N</div>
-         
+        {/* Logo and Brand */}
+        <div className="brand">
+          <Link to="/" className="logo">N</Link>
         </div>
 
+        {/* Burger menu for mobile */}
         <button
           className={`burger ${open ? 'open' : ''}`}
           aria-label="Toggle navigation"
-          onClick={() => setOpen(o => !o)}
+          onClick={() => setOpen(prev => !prev)}
         >
           <span /><span /><span />
         </button>
 
+        {/* Navigation Links */}
         <ul className={`nav-links ${open ? 'show' : ''}`}>
-          {links.map(link => (
-            <li key={link}>
-              <a
-                href={`#${link.toLowerCase()}`}
-                className={active === link ? 'active' : ''}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActive(link);
-                  setOpen(false);
-                  const el = document.getElementById(link.toLowerCase());
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                {link}
-              </a>
-            </li>
-          ))}
+          <li>
+            <Link className={isActive('/') ? 'active' : ''} to="/" onClick={() => setOpen(false)}>Profile</Link>
+          </li>
+          <li>
+            <Link className={isActive('/about') ? 'active' : ''} to="/about" onClick={() => setOpen(false)}>About</Link>
+          </li>
+          <li>
+            <Link className={isActive('/contact') ? 'active' : ''} to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+          </li>
         </ul>
-
-        <div className="action">
-          <button className="cta">Get Started</button>
-        </div>
       </nav>
-
-      {/* spacer so page content isn't hidden */}
       <div className="hero-spacer" />
     </header>
   );

@@ -1,0 +1,61 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e8e6e3;
+  padding: 50px;        /* gi-dako */
+  border: 2px solid #ccc;
+  border-radius: 10px;  /* gamay nga curve improvement */
+  max-width: 1400px;    /* gi-dako */
+  min-height: 500px;    /* gi-taasan ang overall container */
+  margin: 50px auto;    /* para mas center ug spacious */
+}
+
+/* IMAGE SIZE GI-DAGKO */
+.about-image img {
+  width: 450px;  /* from 350px -> 450px */
+  height: 450px; /* para square look */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* TEXT CONTAINER GI-LAPAD */
+.about-text {
+  max-width: 750px; /* from 600px -> 750px */
+}
+
+.about-title {
+  font-size: 55px;     /* padako title */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-subtitle {
+  font-size: 22px;     /* gamay nga enlarge */
+  font-weight: bold;
+  color: #c2185b;
+  margin-bottom: 25px;
+}
+
+.about-description {
+  font-size: 18px;      /* from 16px */
+  line-height: 1.9;     /* para mas readable */
+  color: #444;          /* medyo darker for clarity */
+}
+
+/* ICON SECTION GI-ADJUST */
+.about-icons {
+  margin-top: 35px;
+  display: flex;
+  gap: 30px;        /* gi-layo gamay */
+  font-size: 32px;  /* from 26px */
+}
+
+.about-icons i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-icons i:hover {
+  transform: scale(1.3);
+}
