@@ -15,7 +15,7 @@ export default function About() {
         <h1 className="about-title">About Me</h1>
 
         <p className="about-description">
-          I’m a UI/UX and Front-End Developer with a deep appreciation for minimalism and usability. My design process revolves around understanding users, solving problems, and ensuring every interaction feels natural and engaging.
+         As a BSIT student, I’m continuously learning how design and technology work together to shape better user experiences. I value simplicity, purpose, and innovation in every project I create.
         </p>
 
         <p className="about-description">I specialize in:</p>

@@ -9,7 +9,7 @@ export default function Profile() {
       <div className="profile-text">
         <h1 className="profile-name">Hi, I'm Niña</h1>
         <p className="profile-description">
-         I’m passionate about designing and developing beautiful, user-centered interfaces that bring ideas to life. My focus is on crafting smooth digital experiences through clean design, responsive layouts, and intuitive user flows. I enjoy transforming complex concepts into simple, elegant, and interactive web designs that people love to use.
+         I’m a passionate UI/UX and Front-End Developer dedicated to creating visually appealing and user-focused designs that connect creativity with functionality.
         </p>
       </div>
 
