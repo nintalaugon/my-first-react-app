@@ -1,19 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGithub } from "react-icons/fa";
 import "./Contact.css";
 
 export default function Contact() {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#8c9ec9"; // same sa Profile & About
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  }, []);
+
   return (
     <div className="contact-container">
-      {/* LEFT SIDE - Your Original Text */}
       <div className="contact-text">
         <h1>Contact Me</h1>
+
         <p>
-          Name: Niña Talaugon<br />
-          Course: Bachelor of Science in Information Technology<br />
-          Email: nina.talaugon18@gmail.com<br />
-          Phone: 09072043252<br />
-          Address: Hagnaya Carmen Cebu<br />
-          Github : https://github.com/nintalaugon 
+          <FaEnvelope style={{ marginRight: "10px" }} />
+          <strong>nina.talaugon18@gmail.com</strong>
+        </p>
+
+        <p>
+          <FaPhoneAlt style={{ marginRight: "10px" }} />
+          <strong>09072043252</strong>
+        </p>
+
+        <p>
+          <FaMapMarkerAlt style={{ marginRight: "10px" }} />
+          <strong>Hagnaya, Carmen, Cebu</strong>
+        </p>
+
+        <p>
+          <FaGithub style={{ marginRight: "10px" }} />
+          <a
+            href="https://github.com/nintalaugon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            nintalaugon
+          </a>
         </p>
       </div>
     </div>

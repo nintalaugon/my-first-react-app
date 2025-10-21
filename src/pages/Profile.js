@@ -7,14 +7,9 @@ export default function Profile() {
     <div className="profile-container">
       {/* Left Section */}
       <div className="profile-text">
-        <h1 className="profile-name">Welcome to My Profile</h1>
+        <h1 className="profile-name">Hi, I'm Niña</h1>
         <p className="profile-description">
-          I am Niña Talaugon, a driven and aspiring IT professional currently 
-          pursuing a Bachelor of Science in Information Technology. I am passionate 
-          about technology, innovation, and creating digital solutions that make 
-          everyday tasks easier and more efficient. With a positive mindset and a 
-          desire to grow, I am continuously developing my skills in programming, 
-          design, and information systems.
+         I’m passionate about designing and developing beautiful, user-centered interfaces that bring ideas to life. My focus is on crafting smooth digital experiences through clean design, responsive layouts, and intuitive user flows. I enjoy transforming complex concepts into simple, elegant, and interactive web designs that people love to use.
         </p>
       </div>
 
