@@ -23,7 +23,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo and Brand */
 .brand {
   display: flex;
   align-items: center;
@@ -32,7 +31,7 @@
 }
 
 .brand .logo {
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
   color: white;
   display: grid;
   place-items: center;
@@ -43,10 +42,6 @@
   border-radius: 10px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   box-shadow: 0 6px 18px rgba(107, 70, 193, 0.18);
-}
-
-.brand .logo:hover {
-  text-decoration: none;
 }
 
 .brand-name {
@@ -66,8 +61,8 @@
 }
 
 .nav-links a {
-  text-decoration: none;       /* remove underline */
-  color: var(--muted);          /* default text color */
+  text-decoration: none;
+  color: var(--muted);
   display: inline-block;
   padding: 8px 14px;
   border-radius: 8px;
@@ -114,8 +109,12 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Mobile nav */
+/* MOBILE */
 @media (max-width: 880px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
   .burger {
     display: block;
   }
@@ -126,7 +125,7 @@
     left: 50%;
     transform: translateX(-50%);
     flex-direction: column;
-    background: var(--glass);
+    background: rgba(7, 17, 41, 0.95);
     width: 90%;
     border-radius: 12px;
     padding: 12px;
@@ -145,7 +144,7 @@
   }
 }
 
-/* Spacer so content not hidden under navbar */
+/* Spacer */
 .hero-spacer {
   height: 80px;
 }
